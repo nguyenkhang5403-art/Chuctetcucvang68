@@ -49,7 +49,7 @@ body{
 .hidden{display:none}
 
 /* HAPPY NEW YEAR */
-.happy,.newyear{
+.happy,.new,.year{
     display:flex;
     gap:6px;
 }
@@ -165,9 +165,10 @@ canvas{
   </g>
 </svg>
 
-<audio autoplay loop>
-<source src="Nhac.mp3">
+<audio id="bgm" loop>
+    <source src="Nhac.mp3" type="audio/mpeg">
 </audio>
+
 
 <canvas id="fireworks"></canvas>
 
@@ -218,6 +219,8 @@ const lixi=document.getElementById("lixi");
 const letter=document.getElementById("letter");
 
 open.onclick=()=>{
+    document.getElementById("bgm").play();
+
     open.classList.add("hidden");
     step1.classList.remove("hidden");
 
@@ -284,4 +287,5 @@ draw();
 
 </body>
 </html>
+
 
